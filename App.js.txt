@@ -1,0 +1,68 @@
+import React, {Component} from 'react';
+import {
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity,
+  TextInput,
+} from 'react-native';
+import {Card} from 'react-native-shadow-cards';
+
+class App extends Component {
+  render() {
+    return (
+      <View style={styles.MainView}>
+        <Card
+          style={{
+            width: '90%',
+            height: '20%',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <Text style={{fontSize: 16, fontWeight: 'bold', color: ' blue'}}>
+            React Native
+          </Text>
+        </Card>
+        <Card
+          style={{
+            width: '90%',
+            height: '8%',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'yellow',
+            marginTop: 20,
+          }}>
+          <TouchableOpacity onPress={() => alert('press..')}>
+            <Text>Press Me </Text>
+          </TouchableOpacity>
+        </Card>
+
+        <Card
+          style={{
+            width: '90%',
+            height: '8%',
+
+            backgroundColor: 'green',
+            marginTop: 20,
+          }}>
+          <TextInput
+            placeholder="Write Here"
+            placeholderTextColor="red"
+            maxLength={5}
+          />
+        </Card>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  MainView: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    // backgroundColor: 'green',
+  },
+});
+
+export default App;
